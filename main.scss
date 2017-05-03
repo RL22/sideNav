@@ -1,0 +1,114 @@
+$proxima-nova-soft: "proxima-nova-soft";
+$revel-blue: #00a3e0;
+$revel-night: #373B40;
+$revel-night-t: rgba(55, 59, 64, .7);
+$revel-blue-t: rgba(0, 163, 224, 0.3);
+$photo-filter-light: rgba(235,235,235,.1);
+$photo-filter-mid: rgba(153,153,153,.1);
+
+*{
+	font-family: $proxima-nova-soft;
+	font-weight: 300;
+}
+.inner{
+  max-width: 1200px;
+  margin: auto;
+}
+header, nav {
+  display: block;
+}
+ul{
+  margin: auto;
+  list-style: none;
+  list-style-image: none;
+ }
+
+
+
+header.sideNav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 80px;
+  padding: 10px 40px;
+  background-color: $revel-blue;
+  nav.nav-wrapper{
+    float: left;
+    ul.nav-menu{
+      list-style: none;
+      color: #fff;
+      line-height: 90px;
+      li.btn-nav{
+        display: inline-block;
+        position: relative;
+        float: left;
+				min-height: 90px;
+				span{
+					height: 2px;
+					width: 10px;
+					background-color: $revel-night;
+				}
+      }
+      li.logo{
+        @extend .btn-nav;
+        img{
+          max-width: 160px;
+        }
+      }
+    }
+		.nav-popOut{
+			position: fixed;
+			top: 0;
+			left:-300px;
+			bottom: 0;
+			z-index: 9999;
+			width: 300px;
+			padding: 0;
+			background-color: $revel-blue;
+			backface-visibility: hidden;
+			&:active{
+				left: 0;
+			}
+			.nav-popOut-inner{
+				position: relative;
+				padding: 10px 0;
+				background-color: $revel-blue;
+				z-index: 3;
+				height: 100%;
+				overflow-y: scroll;
+			}
+		}
+		nav.popOut{
+			ul{
+				padding: 20px 30px;
+				border-top: 1px solid $revel-night;
+				li.nav-link{
+					margin-bottom: 5px;
+				}
+			}
+		}
+  }
+
+  .nav-right{
+    float: right;
+		.btn-basic{
+			position: fixed;
+			bottom: 10%;
+			margin: 10px auto;
+			max-width: 100%;
+			padding: 10px 60px;
+			border-radius: 6px;
+			color: $revel-blue;
+			background-color: #ebebeb;
+			border: $revel-blue 1px solid;
+			&:hover{
+				background-color: $revel-blue;
+				border-radius: 6px;
+				color: #ebebeb;
+				transition: .8s;
+			}
+		}
+  }
+}
