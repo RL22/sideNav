@@ -1,0 +1,108 @@
+@import "ionicons.scss";
+
+$proxima-nova-soft: "proxima-nova-soft";
+$revel-blue: #00a3e0;
+$revel-night: #373B40;
+$revel-night-t: rgba(55, 59, 64, .7);
+$revel-blue-t: rgba(0, 163, 224, 0.3);
+$photo-filter-light: rgba(235,235,235,.1);
+$photo-filter-mid: rgba(153,153,153,.1);
+
+*{
+	font-family: $proxima-nova-soft;
+	font-weight: 300;
+}
+.inner{
+  max-width: 1200px;
+  margin: auto;
+}
+header, nav {
+  display: block;
+}
+ul{
+  margin: auto;
+  list-style: none;
+  list-style-image: none;
+ }
+header.header-main-blue{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	height: 80px;
+	background-color: $revel-blue;
+	.nav-wrapper{
+		padding-top: 20px;
+		.ion-navicon{
+			font-size: 30px;
+			color: white;
+		}
+		.logo{
+			width: 80px;
+			margin: 10px 20px;
+			vertical-align: bottom;
+			background-size: cover;
+		}
+		.nav-right{
+			float: right;
+			margin: 10px auto;
+			#nav-search{
+				display: inline-block;
+				position: relative;
+				padding: 0 0 0 20px;
+				margin: 0 20px;
+				// width: 120px;
+				vertical-align: middle;
+				#input{
+					border-radius: 6px;
+					// height: 20px;
+					margin: auto;
+					padding: 10px 20px;
+					padding-right: 30px;
+					width: 102%;
+				}
+				span{
+					position: absolute;
+					padding: 8px 5px 5px 5px ;
+				}
+				.country{
+					color: #FFF;
+				}
+			}
+			.site-search{
+				font-size: 22px;
+				color: #fff;
+				margin: 10px 20px;
+			}
+			.btn-basic{
+				font-size: 18px;
+				padding: 10px 20px;
+				border: 1px solid $revel-blue;
+				border-radius: 6px;
+				background-color: #e6e6e6;
+				&:hover{
+					background-color: $revel-night
+				}
+			}
+		}
+	}
+}
+.nav-popOut{
+	background-color: $revel-blue;
+	color: $revel-night;
+	top: 80px;
+	left: 0px;
+	width: 200px;
+	height: 300px;
+	nav.popOut{
+		padding-left: 10px;
+		ul{
+			border-top: 1px solid $revel-night;
+			color: #FFF;
+		}
+		a.nav-link{
+			color: #ffffff;
+		}
+	}
+}
