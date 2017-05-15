@@ -7,31 +7,42 @@
     <link rel="stylesheet" href="http://static.revelsystems.com/wp-content/themes/reveldown/style.min.css?ver=1493763011">
     <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
     <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript">
-
-    </script>
   </head>
   <body>
     <header class="header header-main-blue">
       <div class="inner">
         <nav class="nav-wrapper">
-          <a href="" class="btn-menu" id="nav-menu" data-trigger="popOut">
-            <icon class="ion-navicon"></icon>
-          </a>
-          <a href="revelsystems.com">
-            <img src="/img/revel-logo-wht.svg" alt="revelsystems logo" class="logo"></img>
+
+          <a href="#" class="btn-menu" id="nav-menu">
+            <i id="menu" class="icon ion-navicon"></i>
           </a>
 
+          <a href="revelsystems.com">
+            <img src="/img/revel-logo-wht.svg" alt="revelsystems logo" class="logo"> </img>
+          </a>
           <div class="nav-right">
-            <!-- <a href="#" class="site-search">
-              <i class="ion-ios-search"></i>
-            </a> -->
-            <a href="#" class="country">USA</a>
             <div id="nav-search">
-              <span class="ion-ios-search" style=""></span>
+              <span class="icon ion-ios-search" style=""></span>
               <input type="text" id="input" placeholder="What are you looking for?">
             </div>
             <a href="#" class="btn-basic">Free Quote</a>
+          </div>
+          <div class="header-secondary-nav">
+            <div class="inner">
+              <div id="select-lang" class="selectbox dropdown--language">
+                <select class="language-select js-language">languages
+                  <option value="http://revelsystems.com/uk/">U.K.</option>
+                  <option value="http://revelsystems.com/sg/">Singapore</option>
+                  <option value="http://revelsystems.com/lt/">Lithuania</option>
+                  <option value="http://revelsystems.com/" selected="">North America</option>
+                  <option value="http://revelsystems.com.au/">Australia</option>
+                </select>
+                <span class="selected-item">North America&nbsp;
+                  <img src="http://static.revelsystems.com/wp-content/uploads/flags/us.png" height="12" alt="en">
+                  <i class="ion-ios-arrow-down"></i>
+                </span>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
@@ -40,8 +51,14 @@
       <div class="nav-popOut-inner">
         <nav class="popOut">
           <ul>
-            <li class="nav-link"><a href="#">Business Types</a>
-              <ul class="subNav-wrapper">
+            <li class="nav-link">
+              <a href="#" id="close-menu"><i class="ion-ios-close-empty"></i></a></li>
+
+            <li class="nav-link dropdown">
+
+              <a class="icon-dropdown" href="#"><i class="icon ion-ios-arrow-right"></i></a>
+              <a class="btn-dropdown" href="#">Business Types</a>
+              <ul class="subNav nav-dropdown-menu">
                 <li class="subNav-wrap"><a href="#">Restaurant</a></li>
                 <li class="subNav-wrap"><a href="#">Quick Service</a></li>
                 <li class="subNav-wrap"><a href="#">Retail</a></li>
@@ -54,21 +71,22 @@
             <li class="nav-link"><a href="#">Customers</a></li>
           </ul>
           <ul>
-            <li class="nav-links-secd"><a href="#">Revel University</a></li>
-            <li class="nav-links-secd"><a href="#">About Us</a></li>
-            <li class="nav-links-secd"><a href="#">Support</a></li>
-            <li class="nav-links-secd"><a href="#">Blog</a></li>
+            <li class="nav-link"><a href="#">Revel University</a></li>
+            <li class="nav-link"><a href="#">About Us</a></li>
+            <li class="nav-link"><a href="#">Support</a></li>
+            <li class="nav-link"><a href="#">Blog</a></li>
           </ul>
         </nav>
       </div>
     </div>
+    <script type="text/javascript" src="/js/main.js"></script>
   </body>
 </html>
 
 <!-- <header class="header">
   <div class="inner">
     <nav class="nav-wrapper">
-        <ul class="nav-menu">
+        <ul class="">
           <li class="btn-nav">
             <icon class="icon ion-navicon">
               <a id="Nav_Menu" class="btn-menu" href="#" data-trigger="popOut"></a>

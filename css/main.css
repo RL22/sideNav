@@ -2466,22 +2466,33 @@ ul {
   list-style: none;
   list-style-image: none; }
 
+.show {
+  display: block;
+  position: absolute;
+  left: 300px;
+  top: 20px;
+  width: 200px; }
+
+.hide {
+  display: none; }
+
 header.header-main-blue {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 10;
-  height: 80px;
+  z-index: 9999;
+  height: 100px;
   background-color: #00a3e0; }
   header.header-main-blue .nav-wrapper {
-    padding-top: 20px; }
+    padding-top: 35px; }
     header.header-main-blue .nav-wrapper .ion-navicon {
-      font-size: 30px;
+      margin-right: 10px;
+      font-size: 40px;
       color: white; }
     header.header-main-blue .nav-wrapper .logo {
-      width: 80px;
-      margin: 10px 20px;
+      width: 100px;
+      margin: 10px 10px;
       vertical-align: bottom;
       background-size: cover; }
     header.header-main-blue .nav-wrapper .nav-right {
@@ -2502,12 +2513,6 @@ header.header-main-blue {
         header.header-main-blue .nav-wrapper .nav-right #nav-search span {
           position: absolute;
           padding: 8px 5px 5px 5px; }
-        header.header-main-blue .nav-wrapper .nav-right #nav-search .country {
-          color: #FFF; }
-      header.header-main-blue .nav-wrapper .nav-right .site-search {
-        font-size: 22px;
-        color: #fff;
-        margin: 10px 20px; }
       header.header-main-blue .nav-wrapper .nav-right .btn-basic {
         font-size: 18px;
         padding: 10px 20px;
@@ -2516,18 +2521,78 @@ header.header-main-blue {
         background-color: #e6e6e6; }
         header.header-main-blue .nav-wrapper .nav-right .btn-basic:hover {
           background-color: #373B40; }
+    header.header-main-blue .nav-wrapper .header-secondary-nav {
+      padding: 10px 0px 0px;
+      border-bottom: none; }
+      header.header-main-blue .nav-wrapper .header-secondary-nav #select-lang {
+        float: right;
+        padding: 0; }
+        header.header-main-blue .nav-wrapper .header-secondary-nav #select-lang:after {
+          background: none; }
+        header.header-main-blue .nav-wrapper .header-secondary-nav #select-lang span.selected-item {
+          color: #fff;
+          font-weight: 100; }
+          header.header-main-blue .nav-wrapper .header-secondary-nav #select-lang span.selected-item i {
+            font-size: 16px; }
 
 .nav-popOut {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  z-index: 100;
+  width: 300px;
+  padding: 0;
   background-color: #00a3e0;
-  color: #373B40;
-  top: 80px;
-  left: 0px;
-  width: 200px;
-  height: 300px; }
-  .nav-popOut nav.popOut {
-    padding-left: 10px; }
-    .nav-popOut nav.popOut ul {
-      border-top: 1px solid #373B40;
-      color: #FFF; }
-    .nav-popOut nav.popOut a.nav-link {
-      color: #ffffff; }
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
+  .nav-popOut.active {
+    left: 0; }
+  .nav-popOut .nav-popOut-inner {
+    position: relative;
+    background-color: #00a3e0;
+    z-index: 3;
+    height: 100%;
+    top: 100px; }
+
+nav.popOut #close-menu {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-align: right; }
+  nav.popOut #close-menu i {
+    font-size: 36px;
+    vertical-align: middle;
+    line-height: 0px; }
+
+nav.popOut a {
+  color: #ffffff;
+  letter-spacing: 1.4px;
+  text-transform: uppercase; }
+
+nav.popOut ul {
+  padding: 5px 0px 10px 20px;
+  border-top: 1px solid #373B40;
+  background-color: #00a3e0; }
+  nav.popOut ul li.nav-link {
+    margin-top: 10px; }
+    nav.popOut ul li.nav-link:hover {
+      text-decoration: underline; }
+    nav.popOut ul li.nav-link .icon-dropdown {
+      float: right;
+      position: relative;
+      display: block; }
+      nav.popOut ul li.nav-link .icon-dropdown i {
+        font-size: 22px;
+        line-height: 0px;
+        margin-right: 10px; }
+
+nav.popOut .nav-dropdown-menu {
+  display: none;
+  padding: 20px;
+  border: none;
+  border-radius: 6px;
+  left: 296px; }
+  nav.popOut .nav-dropdown-menu.show {
+    display: block; }
