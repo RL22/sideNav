@@ -77,17 +77,20 @@ header.header-main-blue{
 			float: right;
 			margin: 10px auto;
 			.icon{
+        display: none;
 				color: $white;
 				margin: 8px 8px 0px 0px;
 				font-size: 24px;
 				line-height: 0px;
+        @media screen and (max-width: 600px){
+          display: block;
+        }
 			}
 			#nav-search{
 				display: inline-block;
 				position: absolute;
 				padding: 0 0 0 20px;
 				margin: 0 20px;
-				// width: 120px;
 				vertical-align: middle;
 				&.show{
 					display: block;
@@ -104,7 +107,6 @@ header.header-main-blue{
 						width: 100%;
 						z-index: 1;
 						box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.5);
-
 					}
 				}
 				span{
@@ -120,7 +122,11 @@ header.header-main-blue{
 					left: 0;
 					right: 0;
 				}
+        @media screen and (min-width: 600px){
+          position: relative;
+        }
 			}
+
 			.btn-basic{
 				font-size: 18px;
 				padding: 10px 20px;

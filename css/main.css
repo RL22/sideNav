@@ -2506,10 +2506,14 @@ header.header-main-blue {
       float: right;
       margin: 10px auto; }
       header.header-main-blue .nav-wrapper .nav-right .icon {
+        display: none;
         color: #FFFFFF;
         margin: 8px 8px 0px 0px;
         font-size: 24px;
         line-height: 0px; }
+        @media screen and (max-width: 600px) {
+          header.header-main-blue .nav-wrapper .nav-right .icon {
+            display: block; } }
       header.header-main-blue .nav-wrapper .nav-right #nav-search {
         display: inline-block;
         position: absolute;
@@ -2543,6 +2547,9 @@ header.header-main-blue {
             top: 110px;
             left: 0;
             right: 0; } }
+        @media screen and (min-width: 600px) {
+          header.header-main-blue .nav-wrapper .nav-right #nav-search {
+            position: relative; } }
       header.header-main-blue .nav-wrapper .nav-right .btn-basic {
         font-size: 18px;
         padding: 10px 20px;
