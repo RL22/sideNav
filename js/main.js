@@ -6,6 +6,9 @@ $("#close-menu").click(function(){
   $("#menu").addClass("ion-navicon").removeClass("ion-ios-close-empty");
   $(".nav-popOut").removeClass("active");
 });
+$("#search-mbl").click(function(){
+  $("#nav-search").toggleClass("show");
+});
 $(".icon-dropdown").click(function(){
   $(".subNav").toggleClass("show");
   $(".icon")

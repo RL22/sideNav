@@ -3,10 +3,18 @@
 $proxima-nova-soft: "proxima-nova-soft";
 $revel-blue: #00a3e0;
 $revel-night: #373B40;
+$white: #FFFFFF;
 $revel-night-t: rgba(55, 59, 64, .7);
 $revel-blue-t: rgba(0, 163, 224, 0.3);
 $photo-filter-light: rgba(235,235,235,.1);
 $photo-filter-mid: rgba(153,153,153,.1);
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
 
 *{
 	font-family: $proxima-nova-soft;
@@ -51,34 +59,66 @@ header.header-main-blue{
 			margin-right: 10px;
 			font-size: 40px;
 			color: white;
+			@media screen and (max-width: 600px){
+				font-size: 34px;
+				margin-right: 0;
+			}
 		}
 		.logo{
 			width: 100px;
 			margin: 10px 10px;
 			vertical-align: bottom;
 			background-size: cover;
+			@media screen and (max-width: 600px){
+				width: 80px;
+			}
 		}
 		.nav-right{
 			float: right;
 			margin: 10px auto;
+			.icon{
+				color: $white;
+				margin: 8px 8px 0px 0px;
+				font-size: 24px;
+				line-height: 0px;
+			}
 			#nav-search{
 				display: inline-block;
-				position: relative;
+				position: absolute;
 				padding: 0 0 0 20px;
 				margin: 0 20px;
 				// width: 120px;
 				vertical-align: middle;
+				&.show{
+					display: block;
+				}
 				#input{
 					border-radius: 6px;
-					// height: 20px;
 					margin: auto;
 					padding: 10px 20px;
 					padding-right: 30px;
 					width: 102%;
+					@media screen and (max-width: 600px){
+						border: 1px solid $revel-blue;
+						color: $revel-night;
+						width: 100%;
+						z-index: 1;
+						box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.5);
+
+					}
 				}
 				span{
 					position: absolute;
 					padding: 8px 5px 5px 5px ;
+				}
+				@media screen and (max-width: 600px){
+					display: none;
+					width: 80%;
+					margin: auto;
+					padding: 0px;
+					top: 110px;
+					left: 0;
+					right: 0;
 				}
 			}
 			.btn-basic{
@@ -89,6 +129,9 @@ header.header-main-blue{
 				background-color: #e6e6e6;
 				&:hover{
 					background-color: $revel-night;
+				}
+				@media screen and (max-width: 600px){
+					padding: 10px;
 				}
 			}
 		}
@@ -132,6 +175,10 @@ header.header-main-blue{
 		height: 100%;
 		top: 100px;
 	}
+	@media screen and (max-width: 600px){
+		width: 50%;
+
+	}
 }
 nav.popOut{
 	#close-menu{
@@ -159,6 +206,7 @@ nav.popOut{
 			margin-top: 10px;
 			&:hover{
 				text-decoration: underline;
+				line-height: 24px;
 			}
 			.icon-dropdown{
 				float: right;
@@ -180,6 +228,10 @@ nav.popOut{
 		left: 296px;
 		&.show{
 			display: block;
+		}
+		@media screen and (max-width: 600px){
+			left: 95%;
+
 		}
 	}
 }
